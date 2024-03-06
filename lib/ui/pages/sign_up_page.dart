@@ -1,3 +1,4 @@
+import 'package:airplane/ui/pages/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -8,7 +9,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 30),
+        margin: const EdgeInsets.only(top: 30),
         child: Text(
           'Join us and get\nyour next journey',
           style: blackTextStyle.copyWith(
@@ -22,12 +23,12 @@ class SignUpPage extends StatelessWidget {
     Widget inputSection() {
       Widget nameInput() {
         return Container(
-          margin: EdgeInsets.only(bottom: 20),
+          margin: const EdgeInsets.only(bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Full Name'),
-              SizedBox(
+              const Text('Full Name'),
+              const SizedBox(
                 height: 6,
               ),
               TextFormField(
@@ -56,12 +57,12 @@ class SignUpPage extends StatelessWidget {
 
       Widget emailInput() {
         return Container(
-          margin: EdgeInsets.only(bottom: 20),
+          margin: const EdgeInsets.only(bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Email Adress'),
-              SizedBox(
+              const Text('Email Adress'),
+              const SizedBox(
                 height: 6,
               ),
               TextFormField(
@@ -90,12 +91,12 @@ class SignUpPage extends StatelessWidget {
 
       Widget passwordInput() {
         return Container(
-          margin: EdgeInsets.only(bottom: 20),
+          margin: const EdgeInsets.only(bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Password'),
-              SizedBox(
+              const Text('Password'),
+              const SizedBox(
                 height: 6,
               ),
               TextFormField(
@@ -125,12 +126,12 @@ class SignUpPage extends StatelessWidget {
 
       Widget hobbyInput() {
         return Container(
-          margin: EdgeInsets.only(bottom: 30),
+          margin: const EdgeInsets.only(bottom: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Hobby'),
-              SizedBox(
+              const Text('Hobby'),
+              const SizedBox(
                 height: 6,
               ),
               TextFormField(
@@ -158,32 +159,18 @@ class SignUpPage extends StatelessWidget {
       }
 
       Widget submitButton() {
-        return Container(
-          width: double.infinity,
-          height: 55,
-          child: TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/bonus-page');
-            },
-            style: TextButton.styleFrom(
-              backgroundColor: kPrimaryColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(
-                  defaultRadius,
-                ),
-              ),
-            ),
-            child: Text(
-              'Get Started',
-              style: whiteTextStyle.copyWith(fontSize: 18, fontWeight: medium),
-            ),
-          ),
+        return CustomButton(
+          title: 'Get Started',
+          onPressed: () {
+            Navigator.pushNamed(context, '/bonus-page');
+          },
+          width: 220,
         );
       }
 
       return Container(
-        margin: EdgeInsets.only(top: 30),
-        padding: EdgeInsets.symmetric(
+        margin: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 30,
         ),
@@ -206,7 +193,7 @@ class SignUpPage extends StatelessWidget {
     Widget tacButton() {
       return Container(
         alignment: Alignment.center,
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           top: 50,
           bottom: 73,
         ),

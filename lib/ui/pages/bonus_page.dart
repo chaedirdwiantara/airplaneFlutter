@@ -1,3 +1,4 @@
+import 'package:airplane/ui/pages/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -14,7 +15,7 @@ class BonusPage extends StatelessWidget {
           defaultMargin,
         ),
         decoration: BoxDecoration(
-          image: DecorationImage(
+          image: const DecorationImage(
             image: AssetImage(
               'assets/image_card.png',
             ),
@@ -23,7 +24,7 @@ class BonusPage extends StatelessWidget {
             BoxShadow(
                 color: kPrimaryColor.withOpacity(0.5),
                 blurRadius: 50,
-                offset: Offset(0, 10)),
+                offset: const Offset(0, 10)),
           ],
         ),
         child: Column(
@@ -53,8 +54,8 @@ class BonusPage extends StatelessWidget {
                 Container(
                   width: 24,
                   height: 24,
-                  margin: EdgeInsets.only(right: 6),
-                  decoration: BoxDecoration(
+                  margin: const EdgeInsets.only(right: 6),
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
                         'assets/icon_plane.png',
@@ -71,7 +72,7 @@ class BonusPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 41,
             ),
             Text(
@@ -92,7 +93,7 @@ class BonusPage extends StatelessWidget {
 
     Widget title() {
       return Container(
-        margin: EdgeInsets.only(top: 80),
+        margin: const EdgeInsets.only(top: 80),
         child: Text(
           'Big Bonus 🎉',
           style: blackTextStyle.copyWith(
@@ -105,7 +106,7 @@ class BonusPage extends StatelessWidget {
 
     Widget subtitle() {
       return Container(
-        margin: EdgeInsets.only(top: 10),
+        margin: const EdgeInsets.only(top: 10),
         child: Text(
           'We give you early credit so that\nyou can buy a flight ticket',
           style: greyTextStyle.copyWith(
@@ -118,28 +119,13 @@ class BonusPage extends StatelessWidget {
     }
 
     Widget startButton() {
-      return Container(
+      return CustomButton(
+        title: 'Start Fly Now',
+        onPressed: () {
+          Navigator.pushNamed(context, '/main');
+        },
         width: 220,
-        height: 55,
-        margin: EdgeInsets.only(top: 50),
-        child: TextButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/main');
-          },
-          style: TextButton.styleFrom(
-            backgroundColor: kPrimaryColor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(defaultRadius),
-            ),
-          ),
-          child: Text(
-            'Start Fly Now',
-            style: whiteTextStyle.copyWith(
-              fontSize: 18,
-              fontWeight: medium,
-            ),
-          ),
-        ),
+        margin: const EdgeInsets.only(top: 50),
       );
     }
 
