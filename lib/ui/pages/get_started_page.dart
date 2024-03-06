@@ -1,4 +1,4 @@
-import 'package:airplane/ui/pages/custom_button.dart';
+import 'package:airplane/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

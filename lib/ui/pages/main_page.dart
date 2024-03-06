@@ -1,5 +1,5 @@
 import 'package:airplane/shared/theme.dart';
-import 'package:airplane/ui/pages/custom_bottom_navigation.dart';
+import 'package:airplane/ui/widgets/custom_bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
