@@ -102,6 +102,36 @@ class DetailPage extends StatelessWidget {
                     )
                   ]),
             ]),
+          ),
+
+          // NOTE: DESCRTIPTION
+          Container(
+            width: double.infinity,
+            margin: const EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            decoration: BoxDecoration(
+              color: kWhiteColor,
+              borderRadius: BorderRadius.circular(18),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // NOTE: ABOUT
+                Text(
+                  'About',
+                  style: blackTextStyle.copyWith(
+                      fontSize: 16, fontWeight: semiBold),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  'Berada di jalur jalan profivinsi yang menghubungkan Denpasar Singaraja serta letaknya yanbg dekat dengan Kebun Raya Eka Karya menjadikan tembat Bali. ',
+                  style: blackTextStyle.copyWith(
+                      fontSize: 14, fontWeight: regular, height: 2.6),
+                ),
+              ],
+            ),
           )
         ]),
       );
