@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/custom_button.dart';
 import 'package:airplane/ui/widgets/interest_item.dart';
 import 'package:airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
@@ -188,6 +189,49 @@ class DetailPage extends StatelessWidget {
                 )
               ],
             ),
+          ),
+
+          // NOTE: PRICE & BOOK BUTTON
+          Container(
+            width: double.infinity,
+            margin: const EdgeInsets.symmetric(
+              vertical: 30,
+            ),
+            child: Row(
+              children: [
+                // NOTE: PRICE
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'IDR 2.500.000',
+                        style: blackTextStyle.copyWith(
+                          fontSize: 18,
+                          fontWeight: medium,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        'per orang',
+                        style: greyTextStyle.copyWith(
+                          fontWeight: light,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // NOTE: BOOK BUTTON
+                CustomButton(
+                  title: 'Book Now',
+                  onPressed: () {},
+                  width: 170,
+                )
+              ],
+            ),
           )
         ]),
       );
@@ -195,12 +239,14 @@ class DetailPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(
-        children: [
-          backgroundImage(),
-          customShadow(),
-          content(),
-        ],
+      body: SingleChildScrollView(
+        child: Stack(
+          children: [
+            backgroundImage(),
+            customShadow(),
+            content(),
+          ],
+        ),
       ),
     );
   }
