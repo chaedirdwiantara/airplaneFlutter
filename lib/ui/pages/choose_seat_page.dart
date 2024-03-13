@@ -72,14 +72,82 @@ class ChooseSeatPage extends StatelessWidget {
       );
     }
 
+    Widget selectSeat() {
+      return Container(
+        margin: const EdgeInsets.only(top: 30),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 22,
+          vertical: 30,
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
+          color: kWhiteColor,
+        ),
+        child: Column(children: [
+          //NOTE: SEAT INDICATORS
+          Row(
+            children: [
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'A',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'B',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    '',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'C',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    'D',
+                    style: greyTextStyle.copyWith(
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          )
+        ]),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor,
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 24),
-        children: [
-          title(),
-          seatStatus(),
-        ],
+        children: [title(), seatStatus(), selectSeat()],
       ),
     );
   }
