@@ -1,4 +1,6 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/interest_item.dart';
+import 'package:airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
@@ -128,8 +130,62 @@ class DetailPage extends StatelessWidget {
                 Text(
                   'Berada di jalur jalan profivinsi yang menghubungkan Denpasar Singaraja serta letaknya yanbg dekat dengan Kebun Raya Eka Karya menjadikan tembat Bali. ',
                   style: blackTextStyle.copyWith(
-                      fontSize: 14, fontWeight: regular, height: 2.6),
+                      fontSize: 14, fontWeight: regular, height: 2),
                 ),
+
+                //  NOTE: PHOTOS
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Photos',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                Row(
+                  children: const [
+                    PhotoItem(
+                      imageUrl: 'assets/image_photo1.png',
+                    ),
+                    PhotoItem(imageUrl: 'assets/image_photo2.png'),
+                    PhotoItem(imageUrl: 'assets/image_photo3.png'),
+                  ],
+                ),
+
+                // NOTE: INTERESTS
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Interest',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 16,
+                    fontWeight: semiBold,
+                  ),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                Row(
+                  children: const [
+                    InterestItem(text: 'Kids Park'),
+                    InterestItem(text: 'Honor Bridge'),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: const [
+                    InterestItem(text: 'City Museum'),
+                    InterestItem(text: 'Central Mall'),
+                  ],
+                )
               ],
             ),
           )
