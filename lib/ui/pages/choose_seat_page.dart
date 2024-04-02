@@ -158,8 +158,8 @@ class ChooseSeatPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SeatItem(),
-                const SeatItem(),
+                const SeatItem(status: 2),
+                const SeatItem(status: 2),
                 SizedBox(
                   width: 48,
                   height: 48,
@@ -172,11 +172,115 @@ class ChooseSeatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SeatItem(),
-                const SeatItem(),
+                const SeatItem(status: 0),
+                const SeatItem(status: 2),
               ],
             ),
-          )
+          ),
+
+          //NOTE: SEAT 2
+          Container(
+            margin: const EdgeInsets.only(top: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                const SeatItem(status: 0),
+                const SeatItem(status: 0),
+                SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: Text(
+                      '2',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                const SeatItem(status: 0),
+                const SeatItem(status: 2),
+              ],
+            ),
+          ),
+
+          //NOTE: SEAT 3
+          Container(
+            margin: const EdgeInsets.only(top: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                const SeatItem(status: 1),
+                const SeatItem(status: 1),
+                SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: Text(
+                      '3',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                const SeatItem(status: 0),
+                const SeatItem(status: 0),
+              ],
+            ),
+          ),
+
+          //NOTE: SEAT 4
+          Container(
+            margin: const EdgeInsets.only(top: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                const SeatItem(status: 0),
+                const SeatItem(status: 2),
+                SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: Text(
+                      '3',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                const SeatItem(status: 0),
+                const SeatItem(status: 0),
+              ],
+            ),
+          ),
+
+          //NOTE: SEAT 5
+          Container(
+            margin: const EdgeInsets.only(top: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                const SeatItem(status: 0),
+                const SeatItem(status: 0),
+                SizedBox(
+                  width: 48,
+                  height: 48,
+                  child: Center(
+                    child: Text(
+                      '3',
+                      style: greyTextStyle.copyWith(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+                const SeatItem(status: 2),
+                const SeatItem(status: 0),
+              ],
+            ),
+          ),
         ]),
       );
     }
