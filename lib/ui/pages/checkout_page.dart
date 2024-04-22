@@ -1,4 +1,5 @@
 import 'package:airplane/shared/theme.dart';
+import 'package:airplane/ui/widgets/booking_details_item.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutPage extends StatelessWidget {
@@ -73,6 +74,7 @@ class CheckoutPage extends StatelessWidget {
           color: kWhiteColor,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // NOTE: DESTINATION TILE
             Row(children: [
@@ -132,6 +134,55 @@ class CheckoutPage extends StatelessWidget {
                     )
                   ]),
             ]),
+
+            // NOTE: BOOKING DETAILS TEXT
+            Container(
+              margin: const EdgeInsets.only(top: 20),
+              child: Text(
+                'Booking Details',
+                style: blackTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
+              ),
+            ),
+
+            // NOTE: BOOKING DETAILS ITEMS
+            BookingDetailsItem(
+              title: 'Traveler',
+              valueText: '2 person',
+              valueColor: kBlackColor,
+            ),
+            BookingDetailsItem(
+              title: 'Seat',
+              valueText: 'A3, B3',
+              valueColor: kBlackColor,
+            ),
+            BookingDetailsItem(
+              title: 'Insurance',
+              valueText: 'YES',
+              valueColor: kGreenColor,
+            ),
+            BookingDetailsItem(
+              title: 'Refundable',
+              valueText: 'NO',
+              valueColor: kRedColor,
+            ),
+            BookingDetailsItem(
+              title: 'VAT',
+              valueText: '45%',
+              valueColor: kBlackColor,
+            ),
+            BookingDetailsItem(
+              title: 'Price',
+              valueText: 'IDR 8.500.690',
+              valueColor: kBlackColor,
+            ),
+            BookingDetailsItem(
+              title: 'Grand Total',
+              valueText: 'IDR 12.000.000',
+              valueColor: kPrimaryColor,
+            ),
           ],
         ));
   }
