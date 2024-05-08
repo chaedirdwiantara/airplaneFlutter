@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           '/bonus-page': (context) => const BonusPage(),
           '/main': (context) => const MainPage(),
         },
+        // JUST A COMMENT BRO
       ),
     );
   }
