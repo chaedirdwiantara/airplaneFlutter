@@ -32,4 +32,12 @@ class AuthService {
       throw Exception(e);
     }
   }
+
+  Future<void> signOut() async {
+    try {
+      await _auth.signOut();
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
 }
