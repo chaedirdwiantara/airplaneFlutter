@@ -8,11 +8,9 @@ import '../../shared/theme.dart';
 class SignInPage extends StatelessWidget {
   SignInPage({Key? key}) : super(key: key);
 
-  final TextEditingController nameController = TextEditingController(text: '');
   final TextEditingController emailController = TextEditingController(text: '');
   final TextEditingController passwordController =
       TextEditingController(text: '');
-  final TextEditingController hobbyController = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +50,7 @@ class SignInPage extends StatelessWidget {
           listener: (context, state) {
             if (state is AuthSuccess) {
               Navigator.pushNamedAndRemoveUntil(
-                  context, '/bonus-page', (route) => false);
+                  context, '/main', (route) => false);
             } else if (state is AuthFailed) {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 backgroundColor: kRedColor,
@@ -69,11 +67,10 @@ class SignInPage extends StatelessWidget {
               title: 'Sign In',
               onPressed: () {
                 print(passwordController.text);
-                context.read<AuthCubit>().signUp(
-                    name: nameController.text,
-                    email: emailController.text,
-                    password: passwordController.text,
-                    hobby: hobbyController.text);
+                context.read<AuthCubit>().signIn(
+                      email: emailController.text,
+                      password: passwordController.text,
+                    );
               },
               width: 220,
             );
@@ -104,7 +101,7 @@ class SignInPage extends StatelessWidget {
     Widget signUpButton() {
       return GestureDetector(
         onTap: () {
-          Navigator.pop(context);
+          Navigator.pushNamed(context, '/sign-up');
         },
         child: Container(
           alignment: Alignment.center,
