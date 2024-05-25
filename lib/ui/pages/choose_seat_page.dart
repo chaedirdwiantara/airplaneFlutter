@@ -160,8 +160,8 @@ class ChooseSeatPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SeatItem(status: 2),
-                const SeatItem(status: 2),
+                const SeatItem(id: 'A1'),
+                const SeatItem(id: 'B1'),
                 SizedBox(
                   width: 48,
                   height: 48,
@@ -174,8 +174,8 @@ class ChooseSeatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SeatItem(status: 0),
-                const SeatItem(status: 2),
+                const SeatItem(id: 'C1'),
+                const SeatItem(id: 'D1'),
               ],
             ),
           ),
@@ -186,8 +186,8 @@ class ChooseSeatPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SeatItem(status: 0),
-                const SeatItem(status: 0),
+                const SeatItem(id: 'A2'),
+                const SeatItem(id: 'B2'),
                 SizedBox(
                   width: 48,
                   height: 48,
@@ -200,8 +200,8 @@ class ChooseSeatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SeatItem(status: 0),
-                const SeatItem(status: 2),
+                const SeatItem(id: 'C2'),
+                const SeatItem(id: 'D2'),
               ],
             ),
           ),
@@ -212,8 +212,8 @@ class ChooseSeatPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SeatItem(status: 1),
-                const SeatItem(status: 1),
+                const SeatItem(id: 'A3'),
+                const SeatItem(id: 'B3'),
                 SizedBox(
                   width: 48,
                   height: 48,
@@ -226,8 +226,11 @@ class ChooseSeatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SeatItem(status: 0),
-                const SeatItem(status: 0),
+                const SeatItem(
+                  id: 'C3',
+                  isAvailable: false,
+                ),
+                const SeatItem(id: 'D3'),
               ],
             ),
           ),
@@ -238,8 +241,8 @@ class ChooseSeatPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SeatItem(status: 0),
-                const SeatItem(status: 2),
+                const SeatItem(id: 'A4'),
+                const SeatItem(id: 'B4'),
                 SizedBox(
                   width: 48,
                   height: 48,
@@ -252,8 +255,8 @@ class ChooseSeatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SeatItem(status: 0),
-                const SeatItem(status: 0),
+                const SeatItem(id: 'C4'),
+                const SeatItem(id: 'D4'),
               ],
             ),
           ),
@@ -264,8 +267,8 @@ class ChooseSeatPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                const SeatItem(status: 0),
-                const SeatItem(status: 0),
+                const SeatItem(id: 'A5'),
+                const SeatItem(id: 'B5'),
                 SizedBox(
                   width: 48,
                   height: 48,
@@ -278,8 +281,8 @@ class ChooseSeatPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SeatItem(status: 2),
-                const SeatItem(status: 0),
+                const SeatItem(id: 'C5'),
+                const SeatItem(id: 'D5'),
               ],
             ),
           ),
