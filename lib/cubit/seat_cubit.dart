@@ -4,7 +4,6 @@ class SeatCubit extends Cubit<List<String>> {
   SeatCubit() : super([]);
 
   void selectSeat(String id) {
-    print('state $state');
     if (!isSelected(id)) {
       emit(List.from(state)..add(id));
     } else {

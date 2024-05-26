@@ -14,7 +14,7 @@ class SeatItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<SeatCubit, dynamic>(
       builder: (context, state) {
-        bool isSelected = context.read<SeatCubit>().isSelected(id);
+        bool isSelected = context.watch<SeatCubit>().isSelected(id);
 
         Color backgroundColor() {
           if (!isAvailable) {
